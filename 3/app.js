@@ -8,7 +8,7 @@ const fakeResponses = [
     { ad: 5, title: 'The last ad' },
 ];
 
-Promise.allSettled(fakeResponses).then(values => 
+Promise.all(fakeResponses).then(values => 
         setTimeout(() => {
             values.map(value => console.log(value.title))
         }, 2000)) 
